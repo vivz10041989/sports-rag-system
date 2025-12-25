@@ -1,0 +1,22 @@
+[
+    {
+      "question": "Which Indian bowler achieved a historic 7-wicket haul in the 2023 World Cup semi-final against New Zealand?",
+      "ground_truth": "Mohammed Shami achieved a historic 7-wicket haul, finishing with figures of 7/57 in the semi-final match at Wankhede Stadium."
+    },
+    {
+      "question": "Against which team did Rohit Sharma break the record for the most World Cup hundreds during the 2023 tournament?",
+      "ground_truth": "Rohit Sharma broke the record for most World Cup hundreds against Afghanistan in Delhi, where he scored 131 runs off 84 balls."
+    },
+    {
+      "question": "What significant milestone did Virat Kohli achieve during the match against South Africa in Kolkata?",
+      "ground_truth": "During the match against South Africa, Virat Kohli scored his 49th ODI century, equaling Sachin Tendulkar's long-standing world record."
+    },
+    {
+      "question": "How many runs did Virat Kohli score in total during the 2023 World Cup, and what award did he receive?",
+      "ground_truth": "Virat Kohli scored a total of 765 runs (the most in a single World Cup edition) and was named the Player of the Tournament."
+    },
+    {
+      "question": "In the 2023 World Cup Final, which Australian player scored a century to lead his team to victory against India?",
+      "ground_truth": "Travis Head scored a match-winning 137 runs to lead Australia to a 6-wicket victory over India in the final."
+    }
+  ]

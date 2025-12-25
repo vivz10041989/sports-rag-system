@@ -28,3 +28,6 @@ camelot-py[pdf]
 ragas
 datasets
 
+#test
+pytest
+pytest-mock

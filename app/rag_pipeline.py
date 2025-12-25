@@ -1,10 +1,16 @@
+import os
 from langchain_community.vectorstores import FAISS
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_ollama import OllamaLLM
 
+OLLAMA_BASE_URL = os.getenv(
+    "OLLAMA_BASE_URL",
+    "http://localhost:11434"  # default for local & RAGAS
+)
+
 llm = OllamaLLM(
     model="llama3.1",
-    base_url="http://host.docker.internal:11434",
+    base_url=OLLAMA_BASE_URL,
     temperature=0
 )
 
@@ -63,6 +69,23 @@ def rag_answer(question: str) -> str:
     context = retrieve_context(question)
     prompt = build_prompt(context, question)
     return generate_answer(prompt)
+
+def run_rag(question: str):
+    """
+    Returns everything needed for RAGAS
+    """
+    context_docs = retriever.invoke(question)
+    context_texts = [d.page_content for d in context_docs]
+
+    context = "\n".join(context_texts)
+    prompt = build_prompt(context, question)
+    answer = generate_answer(prompt)
+
+    return {
+        "question": question,
+        "answer": answer,
+        "contexts": context_texts
+    }
 
 
 
