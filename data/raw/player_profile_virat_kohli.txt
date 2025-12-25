@@ -1,0 +1,11 @@
+Player Name: Virat Kohli
+Country: India
+Role: Top-order Batsman
+Born: 05 November 1988
+
+Virat Kohli is regarded as one of the greatest batsmen in modern cricket.
+He has scored over 25,000 international runs.
+
+Career Highlights:
+- ICC Cricketer of the Year (2017, 2018)
+- Most ODI centuries while chasing
