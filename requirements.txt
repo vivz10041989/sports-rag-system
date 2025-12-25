@@ -1,10 +1,30 @@
+# Core RAG
 langchain
 langchain-community
-langchain-huggingface
 langchain-text-splitters
+langchain-huggingface
+
+# Embeddings
 sentence-transformers
+
+# Vector DB
 faiss-cpu
+
+# API
 fastapi
 uvicorn
 pydantic
+
+# LLM (local)
 langchain-ollama
+
+# Ingestion – documents & tables
+pypdf
+python-docx
+pandas
+camelot-py[pdf]
+
+# Evaluation
+ragas
+datasets
+

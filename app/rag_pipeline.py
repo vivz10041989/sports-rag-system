@@ -4,6 +4,7 @@ from langchain_ollama import OllamaLLM
 
 llm = OllamaLLM(
     model="llama3.1",
+    base_url="http://host.docker.internal:11434",
     temperature=0
 )
 
@@ -28,6 +29,12 @@ retriever = vectorstore.as_retriever(
 
 def retrieve_context(question: str) -> str:
     docs = retriever.invoke(question)
+    print("\n--- RETRIEVED CHUNKS ---")
+    for d in docs:
+        print("SOURCE:", d.metadata.get("source"))
+        print(d.page_content[:500])
+        print("-----------------------")
+
     context = "\n".join([doc.page_content for doc in docs])
     return context
 

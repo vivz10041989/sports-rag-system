@@ -21,6 +21,8 @@ class QueryResponse(BaseModel):
 @app.post("/ask", response_model=QueryResponse)
 def ask_question(request: QueryRequest):
     answer = rag_answer(request.question)
+     # 🔹 NORMALIZE ANSWER (API layer)
+    answer = " ".join(answer.split())
     return QueryResponse(answer=answer)
 
 @app.get("/")
