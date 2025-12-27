@@ -31,3 +31,7 @@ datasets
 #test
 pytest
 pytest-mock
+
+#frontend
+streamlit
+requests
